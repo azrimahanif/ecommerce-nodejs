@@ -6,6 +6,7 @@ const getAllProducts = async (req, res) => {
     try {
     const data = await query("SELECT * FROM product");
     const lists = data.rows;
+    console.log(lists);
     const title = "All Product"
     res.render("pages/index", { lists, title});
   } catch (error) {

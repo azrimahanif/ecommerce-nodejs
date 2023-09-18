@@ -1,3 +1,6 @@
+import {query} from "../database/index.js"
+
+
 const addNewCartItems = async (req, res) => {
     // insert sql selct new item to cart
       try {
@@ -12,4 +15,4 @@ const addNewCartItems = async (req, res) => {
       }
   };
   
-  export default addNewCartItem;
+  export default addNewCartItems;
