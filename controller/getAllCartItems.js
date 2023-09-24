@@ -4,9 +4,10 @@ const getAllCartItems = async (req, res) => {
   // insert sql selct query then render product card
 
     try {
-    const data = await query("SELECT * FROM cart_items");
+    const data = await query("SELECT cart_items.id, cart_items.quantity, product.name, product.description, product.price, product.currency, product.image_url FROM cart_items JOIN product ON cart_items.product_id = product.id");
     const lists = data.rows;
-    const title = "Cart Item"
+    console.log(lists);
+    const title = "Cart Item";
     res.render("pages/cart", { lists , title});
   } catch (error) {
     console.log(error);

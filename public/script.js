@@ -11,3 +11,7 @@ function clickHomeButton() {
 function clickAddProductButton() {
   location.replace("/addProduct");
 }
+
+function addToCart(productId){
+  console.log(productId);
+}
